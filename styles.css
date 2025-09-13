@@ -1,0 +1,191 @@
+:root {
+  --bg: #ffffff;
+  --card: #fbfbfb;
+  --text: #0f1720;
+  --muted: #6b7280;
+  --accent: #0ea5a4;
+  --radius: 12px;
+  --max-width: 880px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 30px rgba(2, 6, 23, 0.08);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.side {
+  padding: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafb 100%);
+  border-right: 1px solid rgba(15, 23, 32, 0.04);
+}
+
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: 700
+}
+
+.role {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 14px
+}
+
+.contact {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none
+}
+
+.label {
+  display: block;
+  margin: 12px 0 6px 0;
+  font-size: 12px;
+  color: var(--muted)
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px
+}
+
+.chip {
+  font-size: 12px;
+  padding: 6px 8px;
+  background: rgba(14, 165, 164, 0.08);
+  color: var(--accent);
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.chip:hover {
+
+  background: rgba(5, 133, 133, 0.12);
+  cursor: default;
+}
+
+
+main {
+  padding: 28px;
+}
+
+section {
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 8px 0;
+  letter-spacing: 0.6px;
+}
+
+p,
+li,
+dd {
+  font-size: 14px;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.summary {
+  color: var(--text);
+  opacity: 0.95;
+}
+
+ul.skills {
+  padding-left: 18px;
+  margin-top: 8px;
+}
+
+dl {
+  margin: 8px 0;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  color: var(--muted);
+  margin-left: 0
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid rgba(15, 23, 32, 0.04)
+}
+
+
+#github {
+  color: var(--accent);
+  text-decoration: none;
+
+}
+
+#github:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+
+@media (max-width:720px) {
+  .wrap {
+    grid-template-columns: 1fr;
+    padding: 0
+  }
+
+  .side {
+    order: 2;
+    border-right: 0;
+    border-top: 1px solid rgba(15, 23, 32, 0.04)
+  }
+}
